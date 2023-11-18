@@ -24,5 +24,13 @@ int create_input()
 
     printf("여기서 input 프로세스를 생성합니다.\n");
 
+    switch(systemPid = fork()) {
+        case -1:
+            printf("Failed to fork on Input.");
+            break;
+        case 0:
+            input();
+    }
+
     return 0;
 }

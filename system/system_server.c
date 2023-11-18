@@ -24,5 +24,13 @@ int create_system_server()
 
     printf("여기서 시스템 프로세스를 생성합니다.\n");
 
+    switch(systemPid = fork()) {
+        case -1:
+            printf("Failed to fork on System Server");
+            break;
+        case 0:
+            system_server();
+    }
+
     return 0;
 }

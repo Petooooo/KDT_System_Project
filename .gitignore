@@ -4,3 +4,4 @@ main.o
 system_server.o
 web_server.o
 toy_system
+filebrowser.db
